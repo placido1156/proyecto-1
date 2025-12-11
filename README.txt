@@ -1,71 +1,54 @@
-Ronin Simulator VR
+Ronin Simulator VR - Experiencia Interactiva de Samuráis
 
-Proyecto: Experiencia VR interactiva de un samurái forjando y usando su katana.
+Equipo: Plácido Chinchilla, Borja Serrano, Antonio Morales
+Opción: B) Creativa
+URL: https://github.com/placido1156/proyecto-1.git
 
-Tecnologías utilizadas:
+1. Tecnología: A-Frame
+Característica	Descripción
+Imágenes 360°	<a-sky> para fondos inmersivos
+Modelos 3D	<a-gltf-model> para samurái, katana, dojo
+Interactividad	event-set, animation, click sobre botones
+VR	WebXR compatible con Oculus/Quest y navegador
+2. Las 3 Escenas
+Escena	Tipo	Contenido
+1	360°	Aldea: exploración 360º con portal hacia el dojo
+2	3D	Proceso: interacción con la katana, efectos de golpe y sonido
+3	3D	Producto: samurái con katana, animación de ataque, panel de estadísticas
+3. Criterios de Evaluación
+Criterio	Software	Documentación
+a) THD	Escenas 1-3 combinadas	Tabla de escenas y efectos
+b) Producto	Escena 3 usable	Visualización del samurái y katana
+c) Sostenibilidad	Assets optimizados	Impacto energético y carga web
+d) Mercados	Funcionalidad VR	Posibilidad de uso educativo y lúdico
+e) Negocio + Planta	Escenas 1-2 interactivas	Simulación del proceso de forja
+f) IT + OT	Datos de interacción y animaciones	Convergencia de tecnologías VR + Web
+g) Informe	—	Este README.md
+4. Sostenibilidad (Criterio c)
 
-HTML5
+Ahorro CO₂: Uso de VR evita desplazamientos físicos a un dojo.
 
-A-Frame 1.5.0
- (WebVR/WebXR)
+Eficiencia: Modelos y texturas optimizados para carga rápida.
 
-Modelos GLTF (.gltf) para el samurái, katana y escenarios
+Impacto: Formación y entretenimiento digital accesible desde casa.
 
-Sonidos en formato .mp3
+5. Capturas
 
-Estructura del proyecto
-/ (raíz)
-│─ index.html                  # Página principal
-│─ escena-360.html              # Escena de la aldea 360º
-│─ escena-proceso.html          # Escena del proceso de forja
-│─ escena-resultado.html        # Escena final del samurái con katana
-│─ assets/
-│   ├─ 360/
-│   │   └─ fondo360.jpg         # Imagen 360 del fondo
-│   ├─ models/
-│   │   ├─ samurai/
-│   │   │   └─ scene.gltf
-│   │   ├─ katana/
-│   │   │   └─ scene.gltf
-│   │   └─ dojo/
-│   │       └─ scene.gltf
-│   └─ sounds/
-│       ├─ ambient.mp3
-│       ├─ epic.mp3
-│       └─ hit.mp3
+TrabajoDigitalizacion\screenshots
 
-Cómo usarlo
 
-Abre index.html en un navegador compatible con WebVR/WebXR (Chrome, Edge, Firefox).
+6. Uso
 
-Navega por las escenas:
+Abrir index.html en navegador compatible con WebVR/WebXR.
 
-Escena 1 (Aldea 360º) → portal hacia el dojo
+Clic en portales o botones de las escenas para navegar.
 
-Escena 2 (Forja - Proceso) → interactúa con la katana y prueba efectos
+Interactuar con objetos:
 
-Escena 3 (Samurái - Producto) → observa al samurái con la katana y animación de ataque
+Golpear metal → efectos de chispa y sonido
 
-Interactúa con los botones:
+Ver producto → transición al samurái final
 
-Golpear metal → activa animaciones y efectos de chispas/onda
+Mostrar ataque → animación del samurái
 
-Ver producto → lleva a la escena del samurái final
-
-Mostrar ataque → hace que el samurái realice un movimiento de ataque
-
-Notas
-
-La experiencia funciona tanto en navegador de escritorio como en gafas VR compatibles con WebXR.
-
-Todos los modelos deben estar en la carpeta assets/models/ con la misma estructura para que los enlaces funcionen.
-
-Los sonidos deben estar en assets/sounds/ con los nombres indicados.
-
-Ajusta posiciones/rotaciones/escala si tus modelos no se alinean perfectamente en la escena.
-
-Autores
-
-Plácido Chinchilla
-Borja Serrano
-Antonio Morales
+VR: Compatible con gafas Oculus/Quest o cualquier navegador WebXR.
