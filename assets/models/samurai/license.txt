@@ -1,0 +1,11 @@
+Model Information:
+* title:	Ryū ga Gotoku Ishin! - Ryoma
+* source:	https://sketchfab.com/3d-models/ryu-ga-gotoku-ishin-ryoma-f6be8044ed794143b587f3f6d6404321
+* author:	ChaoAniki (https://sketchfab.com/HeroChaoGarden)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Ryū ga Gotoku Ishin! - Ryoma" (https://sketchfab.com/3d-models/ryu-ga-gotoku-ishin-ryoma-f6be8044ed794143b587f3f6d6404321) by ChaoAniki (https://sketchfab.com/HeroChaoGarden) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
