@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Forja - Proceso</title>
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+</head>
+
+<body>
+  <a-scene>
+
+    <!-- Fondo -->
+    <a-sky src="assets/360/fondo360.jpg"></a-sky>
+
+    <!-- Cámara -->
+    <a-entity id="camRig" position="0 1.6 0">
+      <a-entity id="cam" camera look-controls>
+        <a-cursor id="cursor" fuse="false" rayOrigin="mouse"></a-cursor>
+      </a-entity>
+    </a-entity>
+
+    <!-- Suelo -->
+    <a-plane rotation="-90 0 0" width="30" height="30" color="#555"></a-plane>
+
+    <!-- Dojo -->
+    <a-gltf-model id="dojoModel" src="assets/models/dojo/scene.gltf"
+                  position="0 0 -15" scale="10 10 10"></a-gltf-model>
+
+    <!-- Katana (NO SE MUEVE) -->
+    <a-gltf-model id="katana" src="assets/models/katana/scene.gltf"
+                  position="0 1 -1" scale="0.5 0.5 0.5">
+    </a-gltf-model>
+
+    <!-- CHISPAS (añadido) -->
+    <a-entity id="chispas"
+              geometry="primitive: sphere; radius: 0.05"
+              material="color: #ffdd55; opacity: 0"
+              position="0.1 1 -1.1">
+    </a-entity>
+
+    <!-- Onda impacto (añadido) -->
+    <a-entity id="onda"
+              geometry="primitive: ring; radiusInner: 0.01; radiusOuter: 0.4"
+              material="color: #ffffff; opacity: 0"
+              rotation="-90 0 0"
+              position="0 1 -1">
+    </a-entity>
+
+    <!-- Botón Golpear -->
+    <a-box id="botonGolpear" position="-1 1 -1" width="0.6" height="0.3" depth="0.4"
+          material="color: #FF8C00"></a-box>
+    <a-text value="Golpear metal" position="-1.5 1.5 -1" color="#FFF"></a-text>
+
+    <!-- Portal a Resultado -->
+    <a-box id="botonVerProducto" position="2 1 -1" width="0.8" height="0.6" depth="0.3"
+          material="color: #00AAFF"></a-box>
+    <a-text value="Ver producto" position="1.6 1.6 -1" color="#FFF"></a-text>
+
+    <!-- Música -->
+    <a-sound id="musica" src="assets/sounds/ambient.mp3" autoplay="true" loop="true" volume="0.7"></a-sound>
+
+    <!-- Sonido del golpe (añadir hit.mp3 a la carpeta) -->
+    <a-sound id="hitSound" src="assets/sounds/hit.mp3" volume="1"></a-sound>
+
+  </a-scene>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  const katana = document.querySelector('#katana');
+  const botonGolpear = document.querySelector('#botonGolpear');
+  const botonVerProducto = document.querySelector('#botonVerProducto');
+  const chispas = document.querySelector('#chispas');
+  const onda = document.querySelector('#onda');
+  const hitSound = document.querySelector('#hitSound');
+  const cam = document.querySelector('#cam');
+
+  // ----------- EFECTOS AÑADIDOS -----------
+
+  function startStrike() {
+
+    // KATANA – golpe infinito (igual que antes)
+    katana.removeAttribute('animation__golpe');
+    katana.setAttribute('animation__golpe', {
+      property: 'rotation',
+      to: '0 0 25',
+      dur: 150,
+      dir: 'alternate',
+      loop: 1
+    });
+
+    // CHISPAS
+    chispas.removeAttribute('animation__spark');
+    chispas.setAttribute('animation__spark', {
+      property: 'material.opacity',
+      to: 1,
+      dur: 60,
+      dir: 'alternate',
+      loop: 1
+    });
+
+    // ONDA DE IMPACTO
+    onda.removeAttribute('animation__ondaVis');
+    onda.setAttribute('animation__ondaVis', {
+      property: 'material.opacity',
+      to: 0.7,
+      dur: 100,
+      dir: 'alternate'
+    });
+
+    onda.removeAttribute('animation__ondaSize');
+    onda.setAttribute('animation__ondaSize', {
+      property: 'scale',
+      to: '2 2 2',
+      dur: 200,
+      dir: 'alternate'
+    });
+
+    // TEMBLOR DE CÁMARA
+    cam.removeAttribute('animation__shake');
+    cam.setAttribute('animation__shake', {
+      property: 'position',
+      to: '0 1.62 -0.03',
+      dur: 40,
+      dir: 'alternate',
+      loop: 2
+    });
+
+    // SONIDO
+    hitSound.components.sound.playSound();
+  }
+
+  botonGolpear.addEventListener('click', () => startStrike());
+
+  botonVerProducto.addEventListener('click', () => {
+    window.location.href = 'escena-resultado.html';
+  });
+
+});
+</script>
+
+</body>
+</html>

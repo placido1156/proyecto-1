@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Aldea 360</title><script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script></head>
+<body>
+  <a-scene>
+    <a-sky src="assets/360/fondo360.jpg"></a-sky>
+
+    <a-entity id="camRig" position="0 1.6 0">
+      <a-entity camera look-controls>
+        <a-cursor id="cursor" fuse="false" rayOrigin="mouse"></a-cursor>
+      </a-entity>
+    </a-entity>
+
+    <a-gltf-model src="assets/models/torii/scene.gltf" position="0 0 -4" scale="1 1 1"></a-gltf-model>
+
+    <a-box id="portalDojo" position="0 1.2 -2" color="#FF0000"></a-box>
+    <a-text value="Ir al Dojo" position="-0.6 1.8 -2" color="#FFF"></a-text>
+
+    <a-sound src="assets/sounds/ambient.mp3" autoplay="true" loop="true"></a-sound>
+  </a-scene>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelector('#portalDojo').addEventListener('click', () => {
+        window.location.href = 'escena-proceso.html';
+      });
+    });
+  </script>
+</body>
+</html>
+  
