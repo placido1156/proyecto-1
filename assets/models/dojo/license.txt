@@ -1,0 +1,11 @@
+Model Information:
+* title:	Stylized Dojo
+* source:	https://sketchfab.com/3d-models/stylized-dojo-a1386bb6ee5f4f2fa2123f46586a7936
+* author:	L. Virolainen (https://sketchfab.com/LVirolainen)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Stylized Dojo" (https://sketchfab.com/3d-models/stylized-dojo-a1386bb6ee5f4f2fa2123f46586a7936) by L. Virolainen (https://sketchfab.com/LVirolainen) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
