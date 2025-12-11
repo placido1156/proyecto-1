@@ -32,9 +32,9 @@ Eficiencia: Modelos y texturas optimizados para carga rápida.
 
 Impacto: Formación y entretenimiento digital accesible desde casa.
 
-5. Capturas
+5. Capturas 
 
-TrabajoDigitalizacion\screenshots
+proyecto-1\screenshots
 
 
 6. Uso
